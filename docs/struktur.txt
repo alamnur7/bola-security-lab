@@ -1,0 +1,88 @@
+C:\USERS\HYPE\DESKTOP\CYBERSECURITY-JOURNEY\LAB\BOLA-SECURITY-LAB\BOLA-SECURITY-LAB
+|   .env
+|   .gitattributes
+|   .gitignore
+|   docker-compose.yaml
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   pom.xml
+|
++---.mvn
+|   \---wrapper
+|           maven-wrapper.properties
+|
++---src
+|   +---main
+|   |   +---java
+|   |   |   \---com
+|   |   |       \---securitylab
+|   |   |           \---bola
+|   |   |               |   BolaSecurityLabApplication.java
+|   |   |               |   Spring Boot OAuth2 Architecture-2026-11-14-134159.pdf
+|   |   |               |   struktur.txt
+|   |   |               |
+|   |   |               +---audit
+|   |   |               +---authorization
+|   |   |               +---identity
+|   |   |               |   +---config
+|   |   |               |   |       SecurityConfig.java
+|   |   |               |   |
+|   |   |               |   +---controller
+|   |   |               |   |       IdentityController.java
+|   |   |               |   |
+|   |   |               |   \---service
+|   |   |               |           CurrentUserService.java
+|   |   |               |
+|   |   |               +---lab
+|   |   |               |   \---vulnerable
+|   |   |               +---profile
+|   |   |               +---shared
+|   |   |               |   +---config
+|   |   |               |   +---exception
+|   |   |               |   \---response
+|   |   |               \---tenant
+|   |   \---resources
+|   |       |   application.properties
+|   |       |   banner.txt
+|   |       |
+|   |       +---db
+|   |       |   \---migration
+|   |       +---static
+|   |       \---templates
+|   \---test
+|       \---java
+|           \---com
+|               \---securitylab
+|                   \---bola
+|                           BolaSecurityLabApplicationTests.java
+|
+\---target
+    +---classes
+    |   |   application.properties
+    |   |   banner.txt
+    |   |
+    |   \---com
+    |       \---securitylab
+    |           \---bola
+    |               |   BolaSecurityLabApplication.class
+    |               |
+    |               \---identity
+    |                   +---config
+    |                   |       SecurityConfig.class
+    |                   |
+    |                   +---controller
+    |                   |       IdentityController.class
+    |                   |
+    |                   \---service
+    |                           CurrentUserService$CurrentUser.class
+    |                           CurrentUserService.class
+    |
+    +---generated-sources
+    |   \---annotations
+    \---maven-status
+        \---maven-compiler-plugin
+            \---compile
+                \---default-compile
+                        createdFiles.lst
+                        inputFiles.lst

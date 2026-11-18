@@ -1,4 +1,4 @@
-package com.securitylab.bola.identity.service;
+package com.securityblueprint.appsec.identity.service;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

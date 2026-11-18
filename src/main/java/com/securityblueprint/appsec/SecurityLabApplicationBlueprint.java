@@ -1,13 +1,13 @@
-package com.securitylab.bola;
+package com.securityblueprint.appsec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BolaSecurityLabApplication {
+public class SecurityLabApplicationBlueprint {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BolaSecurityLabApplication.class, args);
+		SpringApplication.run(SecurityLabApplicationBlueprint.class, args);
 	}
 
 }

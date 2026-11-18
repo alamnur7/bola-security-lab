@@ -1,4 +1,4 @@
-package com.securitylab.bola.identity.config;
+package com.securityblueprint.appsec.identity.config;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +30,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
-        throws  Exception {
+       {
 
        http
                .csrf(AbstractHttpConfigurer::disable)

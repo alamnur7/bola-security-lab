@@ -1,6 +1,6 @@
-package com.securitylab.bola.identity.controller;
+package com.securityblueprint.appsec.identity.controller;
 
-import com.securitylab.bola.identity.service.CurrentUserService;
+import com.securityblueprint.appsec.identity.service.CurrentUserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

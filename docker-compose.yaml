@@ -1,10 +1,9 @@
-
 services:
 
   # Application Database
   postgres-app:
     image: postgres:17-alpine
-    container_name: bola-postgres-app
+    container_name: appsec-blueprint-postgres-app
     restart: unless-stopped
 
     environment:
@@ -16,7 +15,7 @@ services:
       - "5432:5432"
 
     volumes:
-      - bola_app_data:/var/lib/postgresql/data
+      - appsec_app_data:/var/lib/postgresql/data
 
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${APP_DB_USER} -d ${APP_DB_NAME}"]
@@ -25,13 +24,13 @@ services:
       retries: 5
 
     networks:
-      - bola-network
+      - appsec-blueprint-network
 
 
   # Dedicated Keycloak Database
   postgres-keycloak:
     image: postgres:17-alpine
-    container_name: bola-postgres-keycloak
+    container_name: appsec-blueprint-postgres-keycloak
     restart: unless-stopped
 
     environment:
@@ -43,7 +42,7 @@ services:
       - "5433:5432"
 
     volumes:
-      - keycloak_data:/var/lib/postgresql/data
+      - appsec_keycloak_data:/var/lib/postgresql/data
 
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${KEYCLOAK_DB_USER} -d ${KEYCLOAK_DB_NAME}"]
@@ -52,13 +51,13 @@ services:
       retries: 5
 
     networks:
-      - bola-network
+      - appsec-blueprint-network
 
 
   # Identity Provider
   keycloak:
     image: quay.io/keycloak/keycloak:26.4.7
-    container_name: bola-keycloak
+    container_name: appsec-blueprint-keycloak
     restart: unless-stopped
 
     command:
@@ -84,16 +83,17 @@ services:
         condition: service_healthy
 
     networks:
-      - bola-network
+      - appsec-blueprint-network
 
 
 # Persistent Storage
 volumes:
-  bola_app_data:
-  keycloak_data:
+  appsec_app_data:
+  appsec_keycloak_data:
 
 
 # Internal Service Network
 networks:
-  bola-network:
+  appsec-blueprint-network:
     driver: bridge
+

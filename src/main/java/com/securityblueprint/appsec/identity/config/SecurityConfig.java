@@ -22,7 +22,7 @@ import java.util.List;
 @Configuration
 public class SecurityConfig {
 
-    private static final String ISSUER_URI = "http://localhost:8081/realms/bola-security-lab";
+    private static final String ISSUER_URI = "http://localhost:8081/realms/appsec-blueprint";
 
     private static final String JWK_SET_URI = ISSUER_URI + "/protocol/openid-connect/certs";
 
